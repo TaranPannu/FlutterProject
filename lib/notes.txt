@@ -1,0 +1,10 @@
+Data types
+int days = 30;
+num temp = 30.5;  //can take 30,30.5..int/double
+double d = 9; // in reality d=9.0
+String name = "Taran";
+bool ismale = true;
+var day = "tuesday"; //compiler will decide its data type
+const x = 2; // its value can't be changed
+
+
