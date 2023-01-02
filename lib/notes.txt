@@ -7,4 +7,67 @@ bool ismale = true;
 var day = "tuesday"; //compiler will decide its data type
 const x = 2; // its value can't be changed
 
+Methods
+xx(x: 5);
 
+xx({@required bool y,int x = 6}){   // things in {} are optional it dosen't matter if we don't give
+// here y is required
+}
+
+
+// in home page
+return Scaffold(
+      appBar: AppBar(
+        title: Text("Catalog App"),
+      ),
+      body: Center(
+        child: Container(
+          child: Text(
+              "$name welcome to flutter"), // for more than one word ${name} or + name.
+        ),
+      ),
+      drawer: Drawer(),
+    );
+
+//in main
+ return MaterialApp(
+      home: HomePage(),
+    );// till now material App is providing basic layout
+
+Themes
+return MaterialApp(
+      home: HomePage(),
+      themeMode: ThemeMode.dark, //.light
+      theme: ThemeData(primarySwatch: Colors.deepPurple),// def of light theme
+      darkTheme: ThemeData(brightness: Brightness.dark),// defination of dark theme
+    );
+
+routes
+ home: HomePage(),                      // delete this
+  routes: {"/": ((context) => HomePage()) // "/" means default page....but we can't have two home pages I mean the 
+                                         // above and this one so delete above one
+  "/login": ((context) => LoginPage()
+  },
+
+   return MaterialApp(
+      //home: LoginPage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.green), // def of light theme
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/home",// intially open home page
+      routes: {
+         "/": (context) => LoginPage(),
+        "/home": (context) => HomePage()
+      },
+    );
+
+
+//text
+    Text child: Text(
+        "Login Page",
+        style: TextStyle(
+          fontSize: 20,
+          color: Colors.blue,
+          fontWeight: FontWeight.bold,
+        ),
+      )),
