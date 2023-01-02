@@ -71,3 +71,25 @@ routes
           fontWeight: FontWeight.bold,
         ),
       )),
+
+
+IMAGES
+create folder in main directory assets/images and add image in it
+in pubspec.yaml ..add
+assets:
+  - assets/images/       // will give all imagaes inside of it
+  Image.asset(
+            "/Users/taranpreetsingh/Downloads/FlutterDev/sdk/learningdart/assets/images/login.png",
+            fit: BoxFit.cover,
+          )
+
+fonts 
+Pub.dev search it 
+add dependency from installion section
+// under this   flutter_lints: ^2.0.0
+import 'package:google_fonts/google_fonts.dart';
+ theme: ThemeData(
+        primarySwatch: Colors.green,
+        fontFamily: GoogleFonts.lato().fontFamily
+     
+          )
