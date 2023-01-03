@@ -93,3 +93,27 @@ import 'package:google_fonts/google_fonts.dart';
         fontFamily: GoogleFonts.lato().fontFamily
      
           )
+
+Simple Container to create button
+ InkWell(
+                  onTap: () => {
+                    Fluttertoast.showToast(msg: "Login Pressed"),
+                  },
+                  child: Container(
+                    //it is gonna be like a empty box we can built anything from this like button
+                    width:
+                        150, //but we can't press container but we can wrap any widget with Inkwell to make it pressable
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: Text("Login",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white)),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                            8), //to remove edge from border radius
+                        color: Colors.deepPurple),
+                  ),
+                )
+
