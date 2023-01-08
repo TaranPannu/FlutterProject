@@ -54,32 +54,34 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: 40.0, //used for spacing
                 ),
-                InkWell(
-                  onTap: () async {
-                    setState(() {
-                      changeButton = false;
-                    });
-                    await Future.delayed(Duration(seconds: 2));
-                    Fluttertoast.showToast(msg: "Login Pressed");
-                    Navigator.pushNamed(context, MyRoutes.expRoute);
-                  },
-                  child: AnimatedContainer(
-                    duration: Duration(seconds: 1),
-                    //it is gonna be like a empty box we can built anything from this like button
-                    width: changeButton ? 150 : 50,
-                    //but we can't press container but we can wrap any widget with Inkwell to make it pressable
-                    height: 50,
-                    alignment: Alignment.center,
-                    child: Text("Login",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white)),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(changeButton
-                            ? 30
-                            : 8), //to remove edge from border radius
-                        color: Colors.deepPurple),
+                Material(
+                  shadowColor: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(changeButton
+                      ? 30
+                      : 8), //to remove edge from border radius
+                  color: Colors.deepPurple,
+                  child: InkWell(
+                    onTap: () async {
+                      setState(() {
+                        changeButton = false;
+                      });
+                      await Future.delayed(Duration(seconds: 2));
+                      Fluttertoast.showToast(msg: "Login Pressed");
+                      Navigator.pushNamed(context, MyRoutes.expRoute);
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 1),
+                      //it is gonna be like a empty box we can built anything from this like button
+                      width: changeButton ? 150 : 50,
+                      //but we can't press container but we can wrap any widget with Inkwell to make it pressable
+                      height: 50,
+                      alignment: Alignment.center,
+                      child: Text("Login",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
+                    ),
                   ),
                 )
 
